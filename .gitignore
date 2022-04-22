@@ -1,0 +1,5 @@
+assignment/__pycache__
+env
+familytree/__pycache__
+familytree/migrations/__pycache__
+db.sqlite3
