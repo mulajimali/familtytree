@@ -125,3 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'assignment.pagination.CustomPagination',
+    'PAGE_SIZE': 1 # we can make it dynamic from class. But, set a number as default
+}

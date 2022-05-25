@@ -11,5 +11,6 @@ urlpatterns = [
     path('sibling/<int:user_id>/', MySiblingView.as_view()),
     path('children/', MyChildrenView.as_view()),
     path('children/<int:user_id>/', MyChildrenView.as_view()),
+    path('comment/', MyComment.as_view()),
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

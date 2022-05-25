@@ -1,3 +1,4 @@
+from email import message
 from django.db import models
 from familytree.choice import *
 # Create your models here.
@@ -52,3 +53,11 @@ class Children(CommanTime):
         return self.first_name +" " +self.last_name
     class Meta:
         verbose_name_plural = "Children"
+
+
+class Comment(CommanTime):
+    sub_chat = models.ForeignKey('self', blank=True, on_delete=models.CASCADE,null=True, related_name='subcomment')
+    message = models.TextField()
+
+    def __str__(self):
+        return str(self.id)
